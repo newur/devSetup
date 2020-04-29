@@ -1,0 +1,21 @@
+- hosts: localhost
+  roles:
+    - role: gantsign.sdkman
+      sdkman_users:
+        - newur
+
+    - role: gantsign.sdkman_init
+      users:
+        - username: newur
+          sdkman_install:
+            - candidate: java
+              version: '14.0.1.hs-adpt'
+            - candidate: java
+              version: '11.0.7.hs-adpt'
+            - candidate: java
+              version: '8.0.252.hs-adpt'
+            - candidate: maven
+              version: '3.6.2'
+          sdkman_default:
+            maven: '3.6.2'
+            java: '14.0.1.hs-adpt'

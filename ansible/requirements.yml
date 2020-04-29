@@ -1,0 +1,7 @@
+- name: gantsign.intellij
+
+- name: gantsign.sdkman
+
+- name: gantsign.sdkman_init
+
+- name: geerlingguy.nodejs

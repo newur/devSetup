@@ -1,0 +1,33 @@
+---
+- name: Converge
+  hosts: all
+
+  pre_tasks:
+    - name: create test users
+      become: yes
+      user:
+        name: '{{ item }}'
+        home: '/home/{{ item }}'
+        createhome: yes
+      with_items:
+        - test_usr1
+
+  roles:
+    - role: gantsign.sdkman
+      sdkman_users: test_usr1
+
+    - role: ansible_role_sdkman_init
+      users:
+        - username: test_usr1
+          sdkman_install:
+            - candidate: jbang
+              version: '0.21.0'
+            - candidate: jbang
+              version: '0.20.0'
+            - candidate: jbang
+              version: '0.19.0'
+            - candidate: jbang
+              version: 'tmp'
+              path: '/tmp'
+          sdkman_default:
+            jbang: '0.20.0'

@@ -1,0 +1,34 @@
+---
+galaxy_info:
+  author: John Freeman
+  role_name: sdkman
+  description: Ansible role for installing the SDKMAN software development kit manager.
+  company: GantSign Ltd.
+  license: MIT
+  min_ansible_version: 2.6
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Fedora
+      versions:
+        - 31
+    - name: Ubuntu
+      versions:
+        - trusty
+        - xenial
+        - bionic
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+    - name: opensuse
+      versions:
+        - 15.1
+  galaxy_tags:
+    - sdkman
+    - java
+    - maven
+    - gradle
+    - development
+dependencies: []
