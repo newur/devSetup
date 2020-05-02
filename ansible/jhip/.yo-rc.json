@@ -1,0 +1,53 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "caffeine",
+    "clientFramework": "angularX",
+    "serverPort": "8080",
+    "serviceDiscoveryType": false,
+    "skipUserManagement": true,
+    "baseName": "myApp",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en", "de"],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "skipClient": false,
+    "testFrameworks": [],
+    "websocket": false,
+    "packageName": "com.newur.myapp",
+    "packageFolder": "com/newur/myapp",
+    "useSass": true,
+    "jhipsterVersion": "6.8.0",
+    "creationTimestamp": 1588444860816,
+    "skipServer": false,
+    "clientPackageManager": "npm",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "applicationType": "monolith",
+    "jwtSecretKey": "YmQ4MTY5YmI5YjAyMWQ5NDNkZTIwM2NjYTIzMDk1NWZiMDZmODk3MjczYWVmYTgyNmU4NDdkMTAwYTIwZjE0NGVjNTM3NWMzZjAxNTBiOWEzMDYxOWE5NGE4MDAwMzQ4ZTU4ODNmYjRiMGZlNmM4ZmYxMjQ5YTI3MGM2MDViZDI=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ]
+  },
+  "entities": []
+}
