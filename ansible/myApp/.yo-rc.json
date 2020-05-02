@@ -1,0 +1,53 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "caffeine",
+    "clientFramework": "angularX",
+    "serverPort": "8080",
+    "serviceDiscoveryType": false,
+    "skipUserManagement": true,
+    "baseName": "myApp",
+    "buildTool": "maven",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en", "de"],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "skipClient": false,
+    "testFrameworks": [],
+    "websocket": false,
+    "packageName": "org.example.myapp",
+    "packageFolder": "org/example/myapp",
+    "useSass": true,
+    "jhipsterVersion": "6.8.0",
+    "creationTimestamp": 1588448760762,
+    "skipServer": false,
+    "clientPackageManager": "npm",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "applicationType": "monolith",
+    "jwtSecretKey": "ODYyYTRiOTEwNzQzZGIyNDkwOWQxNmVlMWE0NGYyN2Q1NjFkODdhZDRmZDBhM2IyOThjNDgxY2EzYjIyMmYwMjc0MzFlNjk2YWZlNmQzNTE0YzNhZWE5M2NlMDEwM2Y2NWI4N2M5NzZhNGYyODVlOWM3ZGVlMjBkOWQ0NzcxZjE=",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.7.0"
+      }
+    ]
+  },
+  "entities": []
+}
