@@ -1,4 +1,0 @@
----
-- name: mandb
-  become: yes
-  command: /usr/bin/mandb

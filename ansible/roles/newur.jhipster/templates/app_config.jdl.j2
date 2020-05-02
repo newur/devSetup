@@ -1,0 +1,22 @@
+/**
+ * Docu: https://www.jhipster.tech/jdl/applications
+ * Example: https://medium.com/jhipster/create-full-microservice-stack-using-jhipster-domain-language-under-30-minutes-ecc6e7fc3f77
+ */
+
+application {
+  config {
+    baseName {{app_name}},
+    packageName {{base_package_name|lower}}.{{app_name|lower}},
+    authenticationType jwt,
+    enableSwaggerCodegen true
+    devDatabaseType h2Disk
+    prodDatabaseType postgresql,
+    cacheProvider caffeine,
+    searchEngine elasticsearch
+    buildTool maven,
+    useSass true,
+    testFrameworks [],
+    skipUserManagement true,
+    languages 	[en, de]
+  }
+}

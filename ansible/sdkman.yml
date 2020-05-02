@@ -15,7 +15,7 @@
             - candidate: java
               version: '8.0.252.hs-adpt'
             - candidate: maven
-              version: '3.6.2'
+              version: '3.6.3'
           sdkman_default:
-            maven: '3.6.2'
-            java: '14.0.1.hs-adpt'
+            maven: '3.6.3'
+            java: '11.0.7.hs-adpt'
