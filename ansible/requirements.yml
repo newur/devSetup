@@ -5,3 +5,5 @@
 - name: gantsign.sdkman_init
 
 - name: geerlingguy.nodejs
+
+- name: geerlingguy.docker
