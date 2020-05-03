@@ -1,0 +1,9 @@
+- import_tasks: find_profile_dir.yml
+    
+- name: Loop over addons list
+  include_tasks: install_addon.yml
+  loop:
+    "{{ firefox_addons }}"
+  loop_control:
+    loop_var: outer_item
+        

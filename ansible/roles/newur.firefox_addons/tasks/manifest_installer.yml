@@ -1,0 +1,32 @@
+- name: Read manifest.json into variable
+  include_vars:
+    file: "{{ tmpdir.path }}/manifest.json"
+    name: manifest
+
+- name:
+  set_fact:
+    exists_addon_id_in_manifest: "{{ manifest.applications is defined or manifest.browser_specific_settings is defined }}"
+
+- name: Copy addon into firefox profile
+  copy:
+    src: "{{ tmpdir.path }}/{{ name }}"
+    dest: "{{ profile_path }}/extensions/{{ 
+      manifest.applications is defined | 
+        ternary(manifest.applications.gecko.id, 
+        manifest.browser_specific_settings.gecko.id) }}.xpi"
+  when: exists_addon_id_in_manifest  
+  
+# Fallback to find addon ID
+- name: find addon id fallback
+  shell: strings cose.sig | grep -o '{.*-.*-.*-.*-.*}'
+  args:
+    chdir: "{{ tmpdir.path }}/META-INF"
+  register: result
+  when: not exists_addon_id_in_manifest
+  changed_when: false
+        
+- name: Copy addon into firefox profile
+  copy:
+    src: "{{ tmpdir.path }}/{{ name }}"
+    dest: "{{ profile_path }}/extensions/{{ result.stdout }}.xpi"
+  when: not exists_addon_id_in_manifest

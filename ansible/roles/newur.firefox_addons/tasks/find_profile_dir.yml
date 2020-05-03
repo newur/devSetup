@@ -1,0 +1,16 @@
+- name: Find firefox profile folder
+  find:
+    paths:
+      - ~/.mozilla/firefox
+    patterns:
+      - "prefs.js"
+    recurse: true
+  register: search_result
+  failed_when: search_result.matched != 1
+  when: profile_path is undefined
+     
+- name: Set variable for firefox profile path
+  set_fact:
+    profile_path: "{{ search_result.files[0].path | dirname }}"
+  when: profile_path is undefined
+        

@@ -1,0 +1,10 @@
+- name: Read mozilla_recommendation.json into variable
+  include_vars:
+    file: "{{ tmpdir.path }}/mozilla-recommendation.json"
+    name: moz_json
+
+- name: Copy addon into firefox profile
+  copy:
+    src: "{{ tmpdir.path }}/{{ name }}"
+    dest: "{{ profile_path }}/extensions/{{ moz_json.addon_id }}.xpi"
+        
