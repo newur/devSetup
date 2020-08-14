@@ -1,17 +1,19 @@
-- name: Install JHipster Generator
-  npm:
-    name: generator-jhipster
-    global: yes
-  
-- name: Install VueJS Blueprint
-  npm:
-    name: generator-jhipster-vuejs
-    global: yes
-    
 - name: Create Folder for JHipster Application
   file:
     path: "./{{ app_name }}"
     state: directory
+
+- name: Install JHipster Generator
+  npm:
+    name: generator-jhipster
+    path: "./{{ app_name }}"
+    #global: yes
+  
+- name: Install VueJS Blueprint
+  npm:
+    name: generator-jhipster-vuejs
+    path: "./{{ app_name }}"
+    #global: yes
     
 - name: Copy App Config
   template:
@@ -22,4 +24,4 @@
   command: jhipster import-jdl app_config.jdl --blueprints vuejs
   args:
     chdir: "./{{ app_name }}"
-    creates: .yo-rc.json
+    creates: ".yo-rc.json"
