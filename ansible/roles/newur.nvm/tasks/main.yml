@@ -5,3 +5,6 @@
     
 - name: Source .nvm/nvm.sh
   shell: ~/.nvm/nvm.sh
+  
+- name: install nodeJS
+  shell: nvm install v14.8.0 && nvm use v14.8.0
